@@ -1,0 +1,281 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<cb:CODEBLOCKS xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://education.mit.edu/openblocks/ns http://education.mit.edu/openblocks/codeblocks.xsd" xmlns:cb="http://education.mit.edu/openblocks/ns">
+<Pages collapsible-pages="yes" drawer-with-page="yes">
+<Page page-color="160 160 160" page-drawer="Main" page-infullview="yes" page-name="Main" page-width="1920">
+<PageBlocks>
+<Block genus-name="program" id="232">
+<Location>
+<X>73</X>
+<Y>244</Y>
+</Location>
+<Comment>
+<Text>The first program you write in a new language is called "Hello World". For Arduino, it is Blink!</Text>
+<Location>
+<X>67</X>
+<Y>19</Y>
+</Location>
+<BoxSize>
+<Width>314</Width>
+<Height>81</Height>
+</BoxSize>
+</Comment>
+<Sockets num-sockets="2">
+<BlockConnector con-block-id="237" connector-kind="socket" connector-type="cmd" init-type="cmd" label="setup" position-type="single"/>
+<BlockConnector con-block-id="240" connector-kind="socket" connector-type="cmd" init-type="cmd" label="loop" position-type="single"/>
+</Sockets>
+</Block>
+<Block genus-name="pin-write-digital" id="240">
+<Location>
+<X>205</X>
+<Y>317</Y>
+</Location>
+<BeforeBlockId>232</BeforeBlockId>
+<AfterBlockId>362</AfterBlockId>
+<Sockets num-sockets="2">
+<BlockConnector con-block-id="243" connector-kind="socket" connector-type="number" init-type="number" label="#" position-type="single"/>
+<BlockConnector con-block-id="242" connector-kind="socket" connector-type="boolean" init-type="boolean" label="" position-type="single"/>
+</Sockets>
+</Block>
+<Block genus-name="fs_LED" id="362">
+<Location>
+<X>205</X>
+<Y>371</Y>
+</Location>
+<BeforeBlockId>240</BeforeBlockId>
+<AfterBlockId>244</AfterBlockId>
+<Sockets num-sockets="2">
+<BlockConnector con-block-id="363" connector-kind="socket" connector-type="number" init-type="number" label="LED" position-type="single"/>
+<BlockConnector con-block-id="364" connector-kind="socket" connector-type="boolean" init-type="boolean" label="status" position-type="single"/>
+</Sockets>
+</Block>
+<Block genus-name="delay" id="244">
+<Location>
+<X>205</X>
+<Y>425</Y>
+</Location>
+<BeforeBlockId>362</BeforeBlockId>
+<AfterBlockId>246</AfterBlockId>
+<Sockets num-sockets="1">
+<BlockConnector con-block-id="245" connector-kind="socket" connector-type="number" init-type="number" label="milliseconds" position-type="single"/>
+</Sockets>
+</Block>
+<Block genus-name="pin-write-digital" id="246">
+<Location>
+<X>205</X>
+<Y>455</Y>
+</Location>
+<BeforeBlockId>244</BeforeBlockId>
+<AfterBlockId>365</AfterBlockId>
+<Sockets num-sockets="2">
+<BlockConnector con-block-id="247" connector-kind="socket" connector-type="number" init-type="number" label="#" position-type="single"/>
+<BlockConnector con-block-id="248" connector-kind="socket" connector-type="boolean" init-type="boolean" label="" position-type="single"/>
+</Sockets>
+</Block>
+<Block genus-name="fs_LED" id="365">
+<Location>
+<X>205</X>
+<Y>509</Y>
+</Location>
+<BeforeBlockId>246</BeforeBlockId>
+<AfterBlockId>249</AfterBlockId>
+<Sockets num-sockets="2">
+<BlockConnector con-block-id="366" connector-kind="socket" connector-type="number" init-type="number" label="LED" position-type="single"/>
+<BlockConnector con-block-id="367" connector-kind="socket" connector-type="boolean" init-type="boolean" label="status" position-type="single"/>
+</Sockets>
+</Block>
+<Block genus-name="delay" id="249">
+<Location>
+<X>205</X>
+<Y>563</Y>
+</Location>
+<BeforeBlockId>365</BeforeBlockId>
+<Sockets num-sockets="1">
+<BlockConnector con-block-id="250" connector-kind="socket" connector-type="number" init-type="number" label="milliseconds" position-type="single"/>
+</Sockets>
+</Block>
+<Block genus-name="number" id="250">
+<Label>1000</Label>
+<Location>
+<X>415</X>
+<Y>566</Y>
+</Location>
+<Comment>
+<Text>Change both delay() to see how fast you can still see the LED blink.</Text>
+<Location>
+<X>532</X>
+<Y>518</Y>
+</Location>
+<BoxSize>
+<Width>223</Width>
+<Height>77</Height>
+</BoxSize>
+</Comment>
+<Plug>
+<BlockConnector con-block-id="249" connector-kind="plug" connector-type="number" init-type="number" label="" position-type="mirror"/>
+</Plug>
+</Block>
+<Block genus-name="digital-on" id="367">
+<Location>
+<X>367</X>
+<Y>536</Y>
+</Location>
+<Plug>
+<BlockConnector con-block-id="365" connector-kind="plug" connector-type="boolean" init-type="boolean" label="" position-type="mirror"/>
+</Plug>
+</Block>
+<Block genus-name="number" id="366">
+<Label>7</Label>
+<Location>
+<X>367</X>
+<Y>512</Y>
+</Location>
+<Plug>
+<BlockConnector con-block-id="365" connector-kind="plug" connector-type="number" init-type="number" label="" position-type="mirror"/>
+</Plug>
+</Block>
+<Block genus-name="digital-low" id="248">
+<Location>
+<X>363</X>
+<Y>482</Y>
+</Location>
+<Plug>
+<BlockConnector con-block-id="246" connector-kind="plug" connector-type="boolean" init-type="boolean" label="" position-type="mirror"/>
+</Plug>
+</Block>
+<Block genus-name="variable_number" id="247">
+<Label>ledPin</Label>
+<Location>
+<X>363</X>
+<Y>458</Y>
+</Location>
+<Plug>
+<BlockConnector con-block-id="246" connector-kind="plug" connector-type="number" init-type="number" label="" position-type="mirror"/>
+</Plug>
+</Block>
+<Block genus-name="number" id="245">
+<Label>1000</Label>
+<Location>
+<X>415</X>
+<Y>428</Y>
+</Location>
+<Comment>
+<Text>How many seconds is 1000 ms?</Text>
+<Location>
+<X>587</X>
+<Y>386</Y>
+</Location>
+<BoxSize>
+<Width>165</Width>
+<Height>65</Height>
+</BoxSize>
+</Comment>
+<Plug>
+<BlockConnector con-block-id="244" connector-kind="plug" connector-type="number" init-type="number" label="" position-type="mirror"/>
+</Plug>
+</Block>
+<Block genus-name="digital-off" id="364">
+<Location>
+<X>367</X>
+<Y>398</Y>
+</Location>
+<Plug>
+<BlockConnector con-block-id="362" connector-kind="plug" connector-type="boolean" init-type="boolean" label="" position-type="mirror"/>
+</Plug>
+</Block>
+<Block genus-name="number" id="363">
+<Label>7</Label>
+<Location>
+<X>367</X>
+<Y>374</Y>
+</Location>
+<Plug>
+<BlockConnector con-block-id="362" connector-kind="plug" connector-type="number" init-type="number" label="" position-type="mirror"/>
+</Plug>
+</Block>
+<Block genus-name="digital-high" id="242">
+<Location>
+<X>363</X>
+<Y>344</Y>
+</Location>
+<Comment>
+<Text>"HIGH" means 1 or ON, "LOW" mean 0 or OFF.</Text>
+<Location>
+<X>601</X>
+<Y>226</Y>
+</Location>
+<BoxSize>
+<Width>151</Width>
+<Height>84</Height>
+</BoxSize>
+</Comment>
+<Plug>
+<BlockConnector con-block-id="240" connector-kind="plug" connector-type="boolean" init-type="boolean" label="" position-type="mirror"/>
+</Plug>
+</Block>
+<Block genus-name="variable_number" id="243">
+<Label>ledPin</Label>
+<Location>
+<X>363</X>
+<Y>320</Y>
+</Location>
+<Plug>
+<BlockConnector con-block-id="240" connector-kind="plug" connector-type="number" init-type="number" label="" position-type="mirror"/>
+</Plug>
+</Block>
+<Block genus-name="setter_variable_number" id="237">
+<Location>
+<X>206</X>
+<Y>252</Y>
+</Location>
+<Comment>
+<Text>The setup() function only runs once, then loop() repeats continually.</Text>
+<Location>
+<X>268</X>
+<Y>119</Y>
+</Location>
+<BoxSize>
+<Width>213</Width>
+<Height>96</Height>
+</BoxSize>
+</Comment>
+<BeforeBlockId>232</BeforeBlockId>
+<Sockets num-sockets="2">
+<BlockConnector con-block-id="238" connector-kind="socket" connector-type="number" init-type="number" label="variable" position-type="single"/>
+<BlockConnector con-block-id="239" connector-kind="socket" connector-type="number" init-type="number" label="value" position-type="single"/>
+</Sockets>
+</Block>
+<Block genus-name="number" id="239">
+<Label>13</Label>
+<Location>
+<X>458</X>
+<Y>279</Y>
+</Location>
+<Plug>
+<BlockConnector con-block-id="237" connector-kind="plug" connector-type="number" init-type="number" label="" position-type="mirror"/>
+</Plug>
+</Block>
+<Block genus-name="variable_number" id="238">
+<Label>ledPin</Label>
+<Location>
+<X>458</X>
+<Y>255</Y>
+</Location>
+<Comment>
+<Text>We might want to change the LED pin later. Now we only have to change it one place!</Text>
+<Location>
+<X>534</X>
+<Y>96</Y>
+</Location>
+<BoxSize>
+<Width>219</Width>
+<Height>103</Height>
+</BoxSize>
+</Comment>
+<Plug>
+<BlockConnector con-block-id="237" connector-kind="plug" connector-type="number" init-type="number" label="" position-type="mirror"/>
+</Plug>
+</Block>
+</PageBlocks>
+</Page>
+</Pages>
+</cb:CODEBLOCKS>

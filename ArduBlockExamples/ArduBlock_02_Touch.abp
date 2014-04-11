@@ -1,0 +1,331 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<cb:CODEBLOCKS xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://education.mit.edu/openblocks/ns http://education.mit.edu/openblocks/codeblocks.xsd" xmlns:cb="http://education.mit.edu/openblocks/ns">
+<Pages collapsible-pages="yes" drawer-with-page="yes">
+<Page page-color="160 160 160" page-drawer="Main" page-infullview="yes" page-name="Main" page-width="1920">
+<PageBlocks>
+<Block genus-name="variable_number" id="252">
+<Label>touchPin</Label>
+<Location>
+<X>417</X>
+<Y>237</Y>
+</Location>
+<Comment>
+<Text>Add a new variable in case we want to change it later.</Text>
+<Location>
+<X>573</X>
+<Y>130</Y>
+</Location>
+<BoxSize>
+<Width>255</Width>
+<Height>68</Height>
+</BoxSize>
+</Comment>
+<Plug>
+<BlockConnector con-block-id="251" connector-kind="plug" connector-type="number" init-type="number" label="" position-type="mirror"/>
+</Plug>
+</Block>
+<Block genus-name="number" id="501">
+<Label>22</Label>
+<Location>
+<X>313</X>
+<Y>291</Y>
+</Location>
+<Comment>
+<Text>Analog Pin 4 and Digial Pin 22 (Leonardo, 18 UNO) are the same. We need an internal "pull-up" to pull the signal HIGH when not touched.</Text>
+<Location>
+<X>578</X>
+<Y>212</Y>
+</Location>
+<BoxSize>
+<Width>278</Width>
+<Height>100</Height>
+</BoxSize>
+</Comment>
+<Plug>
+<BlockConnector con-block-id="261" connector-kind="plug" connector-type="number" init-type="number" label="" position-type="mirror"/>
+</Plug>
+</Block>
+<Block genus-name="pin-read-digital-pullup" id="261">
+<Location>
+<X>179</X>
+<Y>288</Y>
+</Location>
+<BeforeBlockId>251</BeforeBlockId>
+<Sockets num-sockets="1">
+<BlockConnector con-block-id="501" connector-kind="socket" connector-type="number" init-type="number" label="#" position-type="single"/>
+</Sockets>
+</Block>
+<Block genus-name="ifelse" id="260">
+<Location>
+<X>178</X>
+<Y>359</Y>
+</Location>
+<Comment>
+<Text>This "conditional loop" decides if the LED is ON or OFF.</Text>
+<Location>
+<X>160</X>
+<Y>557</Y>
+</Location>
+<BoxSize>
+<Width>327</Width>
+<Height>59</Height>
+</BoxSize>
+</Comment>
+<BeforeBlockId>263</BeforeBlockId>
+<Sockets num-sockets="3">
+<BlockConnector con-block-id="255" connector-kind="socket" connector-type="boolean" init-type="boolean" label="test" position-type="single"/>
+<BlockConnector con-block-id="240" connector-kind="socket" connector-type="cmd" init-type="cmd" label="then" position-type="single"/>
+<BlockConnector con-block-id="246" connector-kind="socket" connector-type="cmd" init-type="cmd" label="else" position-type="single"/>
+</Sockets>
+</Block>
+<Block genus-name="pin-write-digital" id="246">
+<Location>
+<X>302</X>
+<Y>460</Y>
+</Location>
+<BeforeBlockId>260</BeforeBlockId>
+<Sockets num-sockets="2">
+<BlockConnector con-block-id="247" connector-kind="socket" connector-type="number" init-type="number" label="#" position-type="single"/>
+<BlockConnector con-block-id="248" connector-kind="socket" connector-type="boolean" init-type="boolean" label="" position-type="single"/>
+</Sockets>
+</Block>
+<Block genus-name="digital-low" id="248">
+<Location>
+<X>460</X>
+<Y>487</Y>
+</Location>
+<Plug>
+<BlockConnector con-block-id="246" connector-kind="plug" connector-type="boolean" init-type="boolean" label="" position-type="mirror"/>
+</Plug>
+</Block>
+<Block genus-name="variable_number" id="247">
+<Label>ledPin</Label>
+<Location>
+<X>460</X>
+<Y>463</Y>
+</Location>
+<Plug>
+<BlockConnector con-block-id="246" connector-kind="plug" connector-type="number" init-type="number" label="" position-type="mirror"/>
+</Plug>
+</Block>
+<Block genus-name="pin-write-digital" id="240">
+<Location>
+<X>303</X>
+<Y>395</Y>
+</Location>
+<BeforeBlockId>260</BeforeBlockId>
+<Sockets num-sockets="2">
+<BlockConnector con-block-id="243" connector-kind="socket" connector-type="number" init-type="number" label="#" position-type="single"/>
+<BlockConnector con-block-id="242" connector-kind="socket" connector-type="boolean" init-type="boolean" label="" position-type="single"/>
+</Sockets>
+</Block>
+<Block genus-name="digital-high" id="242">
+<Location>
+<X>461</X>
+<Y>422</Y>
+</Location>
+<Plug>
+<BlockConnector con-block-id="240" connector-kind="plug" connector-type="boolean" init-type="boolean" label="" position-type="mirror"/>
+</Plug>
+</Block>
+<Block genus-name="variable_number" id="243">
+<Label>ledPin</Label>
+<Location>
+<X>461</X>
+<Y>398</Y>
+</Location>
+<Plug>
+<BlockConnector con-block-id="240" connector-kind="plug" connector-type="number" init-type="number" label="" position-type="mirror"/>
+</Plug>
+</Block>
+<Block genus-name="less" id="255">
+<Location>
+<X>306</X>
+<Y>362</Y>
+</Location>
+<Plug>
+<BlockConnector con-block-id="260" connector-kind="plug" connector-type="boolean" init-type="boolean" label="" position-type="mirror"/>
+</Plug>
+<Sockets num-sockets="2">
+<BlockConnector con-block-id="256" connector-kind="socket" connector-type="number" init-type="number" label="" position-type="bottom"/>
+<BlockConnector con-block-id="258" connector-kind="socket" connector-type="number" init-type="number" label="" position-type="bottom"/>
+</Sockets>
+</Block>
+<Block genus-name="number" id="258">
+<Label>1000</Label>
+<Location>
+<X>576</X>
+<Y>365</Y>
+</Location>
+<Comment>
+<Text>A 10-bit HIGH signal = 1024. Anything less means it is touched.</Text>
+<Location>
+<X>574</X>
+<Y>453</Y>
+</Location>
+<BoxSize>
+<Width>258</Width>
+<Height>88</Height>
+</BoxSize>
+</Comment>
+<Plug>
+<BlockConnector con-block-id="255" connector-kind="plug" connector-type="number" init-type="number" label="" position-type="mirror"/>
+</Plug>
+</Block>
+<Block genus-name="pin-read-analog" id="256">
+<Location>
+<X>316</X>
+<Y>365</Y>
+</Location>
+<Plug>
+<BlockConnector con-block-id="255" connector-kind="plug" connector-type="number" init-type="number" label="" position-type="single"/>
+</Plug>
+<Sockets num-sockets="1">
+<BlockConnector con-block-id="259" connector-kind="socket" connector-type="number" init-type="number" label="#" position-type="single"/>
+</Sockets>
+</Block>
+<Block genus-name="variable_number" id="259">
+<Label>touchPin</Label>
+<Location>
+<X>440</X>
+<Y>365</Y>
+</Location>
+<Plug>
+<BlockConnector con-block-id="256" connector-kind="plug" connector-type="number" init-type="number" label="" position-type="mirror"/>
+</Plug>
+</Block>
+<Block genus-name="serial_println" id="263">
+<Location>
+<X>178</X>
+<Y>329</Y>
+</Location>
+<BeforeBlockId>232</BeforeBlockId>
+<AfterBlockId>260</AfterBlockId>
+<Sockets num-sockets="1">
+<BlockConnector con-block-id="265" connector-kind="socket" connector-type="string" init-type="string" label="" position-type="single"/>
+</Sockets>
+</Block>
+<Block genus-name="glue_sn" id="265">
+<Location>
+<X>312</X>
+<Y>332</Y>
+</Location>
+<Plug>
+<BlockConnector con-block-id="263" connector-kind="plug" connector-type="string" init-type="string" label="" position-type="single"/>
+</Plug>
+<Sockets num-sockets="1">
+<BlockConnector con-block-id="266" connector-kind="socket" connector-type="number" init-type="number" label="" position-type="single"/>
+</Sockets>
+</Block>
+<Block genus-name="pin-read-analog" id="266">
+<Location>
+<X>372</X>
+<Y>332</Y>
+</Location>
+<Plug>
+<BlockConnector con-block-id="265" connector-kind="plug" connector-type="number" init-type="number" label="" position-type="single"/>
+</Plug>
+<Sockets num-sockets="1">
+<BlockConnector con-block-id="267" connector-kind="socket" connector-type="number" init-type="number" label="#" position-type="single"/>
+</Sockets>
+</Block>
+<Block genus-name="variable_number" id="267">
+<Label>touchPin</Label>
+<Location>
+<X>496</X>
+<Y>332</Y>
+</Location>
+<Comment>
+<Text>Click the [Serial Monitor] button to see the values.</Text>
+<Location>
+<X>687</X>
+<Y>322</Y>
+</Location>
+<BoxSize>
+<Width>181</Width>
+<Height>80</Height>
+</BoxSize>
+</Comment>
+<Plug>
+<BlockConnector con-block-id="266" connector-kind="plug" connector-type="number" init-type="number" label="" position-type="mirror"/>
+</Plug>
+</Block>
+<Block genus-name="program" id="232">
+<Location>
+<X>46</X>
+<Y>172</Y>
+</Location>
+<Comment>
+<Text>With Blink, we've got an LED output. Now let's add an input on Analog Pin 0 (Digital Pin 14).</Text>
+<Location>
+<X>41</X>
+<Y>67</Y>
+</Location>
+<BoxSize>
+<Width>365</Width>
+<Height>89</Height>
+</BoxSize>
+</Comment>
+<Sockets num-sockets="2">
+<BlockConnector con-block-id="237" connector-kind="socket" connector-type="cmd" init-type="cmd" label="setup" position-type="single"/>
+<BlockConnector con-block-id="263" connector-kind="socket" connector-type="cmd" init-type="cmd" label="loop" position-type="single"/>
+</Sockets>
+</Block>
+<Block genus-name="setter_variable_number" id="237">
+<Location>
+<X>179</X>
+<Y>180</Y>
+</Location>
+<BeforeBlockId>232</BeforeBlockId>
+<AfterBlockId>251</AfterBlockId>
+<Sockets num-sockets="2">
+<BlockConnector con-block-id="238" connector-kind="socket" connector-type="number" init-type="number" label="variable" position-type="single"/>
+<BlockConnector con-block-id="239" connector-kind="socket" connector-type="number" init-type="number" label="value" position-type="single"/>
+</Sockets>
+</Block>
+<Block genus-name="setter_variable_number" id="251">
+<Location>
+<X>179</X>
+<Y>234</Y>
+</Location>
+<BeforeBlockId>237</BeforeBlockId>
+<AfterBlockId>261</AfterBlockId>
+<Sockets num-sockets="2">
+<BlockConnector con-block-id="252" connector-kind="socket" connector-type="number" init-type="number" label="variable" position-type="single"/>
+<BlockConnector con-block-id="253" connector-kind="socket" connector-type="number" init-type="number" label="value" position-type="single"/>
+</Sockets>
+</Block>
+<Block genus-name="number" id="253">
+<Label>4</Label>
+<Location>
+<X>417</X>
+<Y>261</Y>
+</Location>
+<Plug>
+<BlockConnector con-block-id="251" connector-kind="plug" connector-type="number" init-type="number" label="" position-type="mirror"/>
+</Plug>
+</Block>
+<Block genus-name="number" id="239">
+<Label>13</Label>
+<Location>
+<X>417</X>
+<Y>207</Y>
+</Location>
+<Plug>
+<BlockConnector con-block-id="237" connector-kind="plug" connector-type="number" init-type="number" label="" position-type="mirror"/>
+</Plug>
+</Block>
+<Block genus-name="variable_number" id="238">
+<Label>ledPin</Label>
+<Location>
+<X>417</X>
+<Y>183</Y>
+</Location>
+<Plug>
+<BlockConnector con-block-id="237" connector-kind="plug" connector-type="number" init-type="number" label="" position-type="mirror"/>
+</Plug>
+</Block>
+</PageBlocks>
+</Page>
+</Pages>
+</cb:CODEBLOCKS>
