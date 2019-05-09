@@ -5,7 +5,7 @@
 
 The FunShield is an Arduino shield that provides a variety of inputs and outputs for you quickly access. The use of library functions further simplifies the programming experience for beginners. Dedicated pin assignments also facilitate the combination of inputs and outputs in projects without conflicts.
 
-**To use the library**, download and unzip the folder into the "library" folder of your Arduino installation, not the "library" folder of your sketchbook (this is because it uses the Wire library, and can't find it otherwise). If you downloaded from GitHub, you will also need to remove the "-master" from the folder name (Arduino doesn't like dashes in library names). Restart your Arduino IDE and "FunShield" should show up under [File] -> [Examples], down underneath "Firmata".
+**To use the library**, download and unzip the folder.  Copy the "FunShield-master\FunShield\libraries\FunShield" folder into the "library" folder of your sketchbook. Restart your Arduino IDE and "FunShield" should show up under [File] -> [Examples].
 	
 **Initializing the FunShield**
 

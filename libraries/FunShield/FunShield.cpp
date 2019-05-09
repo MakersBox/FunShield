@@ -8,8 +8,7 @@
 
 #include "Arduino.h"
 #include "FunShield.h"
-#include "../Wire/Wire.h"
-//#include <Wire.h>
+#include <Wire.h>
 
 
 /*

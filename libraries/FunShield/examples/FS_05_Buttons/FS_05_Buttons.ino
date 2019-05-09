@@ -23,7 +23,6 @@
 
 // sets up and initialize FunShield
 #include <FunShield.h>
-#include <Wire.h>        // Require for I2C communication
 FunShield fs;            // Instanciate FunShield instance
 
 
